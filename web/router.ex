@@ -23,6 +23,6 @@ defmodule Badger.Router do
   scope "/api", Badger do
     pipe_through :api
 
-    
+    get "/devices", DeviceController, :index
   end
 end
