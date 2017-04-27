@@ -20,7 +20,9 @@ defmodule Badger.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Badger do
-  #   pipe_through :api
-  # end
+  scope "/api", Badger do
+    pipe_through :api
+
+    get "/devices", DeviceController, :index
+  end
 end
