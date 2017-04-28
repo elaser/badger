@@ -24,5 +24,8 @@ defmodule Badger.Router do
     pipe_through :api
 
     get "/devices", DeviceController, :index
+    get "/devices/:id", DeviceController, :show
+    post "/devices", DeviceController, :create
+    delete "/devices/:id", DeviceController, :delete
   end
 end
