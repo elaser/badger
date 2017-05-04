@@ -7,6 +7,8 @@ defmodule Badger.Device do
     field :push_id, :string
     field :is_active, :boolean
 
+    has_many :messages, Badger.Message
+
     timestamps()
   end
 
