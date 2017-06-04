@@ -27,5 +27,6 @@ defmodule Badger.Router do
     get "/devices/:id", DeviceController, :show
     post "/devices", DeviceController, :create
     delete "/devices/:id", DeviceController, :delete
+    post "/messages", MessageController, :create
   end
 end

@@ -14,6 +14,9 @@ defmodule Badger.DeviceChannel do
   def handle_in(event, payload, socket) do
     IO.inspect(event)
     IO.inspect(payload)
+
+    handle_payload(payload)
+
     {:reply, {:ok, payload}, socket}
   end
 
@@ -29,5 +32,10 @@ defmodule Badger.DeviceChannel do
   # Add authorization logic here as required.
   defp authorized?(_device_id, _payload) do
     true
+  end
+
+  # Given a incoming payload, take an action on it
+  defp handle_payload(_payload) do
+    # action = payload.action
   end
 end
